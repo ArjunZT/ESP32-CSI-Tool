@@ -80,8 +80,19 @@ Run the following command from within one of the sub-project's directories.
 idf.py flash monitor
 ```
 
+Flash with custom `PORT` and `Baudrate`
+```
+idf.py -p PORT [-b BAUD] flash
+```
+
 This will flash the ESP32 and once completed, will print incoming data from the freshly programmed ESP32's serial port. 
 To exit monitoring, use `ctrl+]`
+
+You can combine building, flashing and monitoring into one step by running:
+```
+idf.py -p PORT flash monitor
+```
+To exit IDF monitor use the shortcut `Ctrl+]`.
 
 ## Collecting CSI Data
 
